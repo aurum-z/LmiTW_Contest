@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "LMBaseCharacter.generated.h"
 
+#define CHANNEL_COMBAT UEngineTypes::ConvertToTraceType(ECollisionChannel::ECC_EngineTraceChannel3)
+
 UCLASS()
 class LMITW_API ALMBaseCharacter : public ACharacter
 {
@@ -26,4 +28,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable, Category = "BaseCharacter|Combat")
+	void SphereTraceForTarget(FHitResult& OutHit, const FVector& Start, const FVector& End, float Radius, const TArray<AActor*>& ActorsToIgnore);
+
 };
+
+
