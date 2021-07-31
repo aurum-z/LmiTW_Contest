@@ -3,6 +3,8 @@
 
 #include "Character/LMBaseCharacter.h"
 
+#include "Kismet/KismetSystemLibrary.h"
+
 // Sets default values
 ALMBaseCharacter::ALMBaseCharacter()
 {
@@ -30,5 +32,10 @@ void ALMBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void ALMBaseCharacter::SphereTraceForTarget(FHitResult& OutHit, const FVector& Start, const FVector& End, float Radius, const TArray<AActor*>& ActorsToIgnore)
+{
+	UKismetSystemLibrary::SphereTraceSingle(this, Start, End, Radius, CHANNEL_COMBAT, true, ActorsToIgnore, EDrawDebugTrace::None, OutHit, true);
 }
 
