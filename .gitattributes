@@ -1,3 +1,4 @@
+Content/Temp/** filter=lfs diff=lfs merge=lfs -text
 Content/LMiTW/Assets/** filter=lfs diff=lfs merge=lfs -text
 Content/LMiTW/Maps/** filter=lfs diff=lfs merge=lfs -text
 . filter=lfs diff=lfs merge=lfs -text
