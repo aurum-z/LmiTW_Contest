@@ -18,10 +18,6 @@
 			"Name": "Thumbnailer",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/e6cff6f9f12f4fb699af2012fab767ee"
-		},
-		{
-			"Name": "GPULightmass",
-			"Enabled": true
 		}
 	]
 }
