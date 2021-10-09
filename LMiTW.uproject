@@ -21,11 +21,11 @@
 		},
 		{
 			"Name": "Anima4DUnrealPlugin",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "UEAnimaLoader",
-			"Enabled": true
+			"Enabled": false
 		}
 	]
 }
